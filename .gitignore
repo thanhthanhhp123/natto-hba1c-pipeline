@@ -1,0 +1,20 @@
+__pycache__/
+*.pyc
+# manuscript, submission and working files stay out of the code repository
+*.docx
+*.pdf
+*.pages
+*.tif
+*.log
+Data_request_emails.md
+Submission_readiness_Q3.md
+JBE_submission/
+BE_submission/
+BE_build/
+BE_template_dl/
+audit/
+humanize/
+code/build_manuscript.py
+code/format_jbe.py
+!results/fig3_calibration_dca.pdf
+!results/fig4_shap.pdf

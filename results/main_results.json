@@ -1,0 +1,507 @@
+{
+ "flow": {
+  "enrolled": 9000,
+  "invalid_hba1c": 209,
+  "after_invalid": 8791,
+  "no_followup": 564,
+  "analysed": 8227,
+  "natto_missing": 238,
+  "vka_users": 116
+ },
+ "prevalence": 0.45472225598638627,
+ "seed": 2026,
+ "table1": [
+  {
+   "Variable": "n",
+   "never/low": 3176,
+   "moderate": 2412,
+   "high": 2401,
+   "SMD (high vs never/low)": ""
+  },
+  {
+   "Variable": "Age, years",
+   "never/low": "57.7 (9.0)",
+   "moderate": "59.2 (8.9)",
+   "high": "60.7 (9.0)",
+   "SMD (high vs never/low)": "0.33"
+  },
+  {
+   "Variable": "Male sex, %",
+   "never/low": "58.1",
+   "moderate": "55.4",
+   "high": "53.8",
+   "SMD (high vs never/low)": "-0.09"
+  },
+  {
+   "Variable": "BMI, kg/m2",
+   "never/low": "22.9 (3.2)",
+   "moderate": "23.1 (3.2)",
+   "high": "22.9 (3.1)",
+   "SMD (high vs never/low)": "0.00"
+  },
+  {
+   "Variable": "Diabetes duration, years",
+   "never/low": "10.7 (6.3)",
+   "moderate": "10.8 (6.2)",
+   "high": "11.0 (6.4)",
+   "SMD (high vs never/low)": "0.04"
+  },
+  {
+   "Variable": "Baseline HbA1c, % (NGSP)",
+   "never/low": "8.2 (1.2)",
+   "moderate": "8.2 (1.2)",
+   "high": "8.2 (1.2)",
+   "SMD (high vs never/low)": "-0.00"
+  },
+  {
+   "Variable": "eGFR, mL/min/1.73 m2",
+   "never/low": "78.9 (15.7)",
+   "moderate": "77.9 (15.5)",
+   "high": "77.1 (15.6)",
+   "SMD (high vs never/low)": "-0.11"
+  },
+  {
+   "Variable": "Insulin use, %",
+   "never/low": "15.2",
+   "moderate": "15.9",
+   "high": "16.4",
+   "SMD (high vs never/low)": "0.03"
+  },
+  {
+   "Variable": "Vitamin K antagonist use, %",
+   "never/low": "2.9",
+   "moderate": "0.7",
+   "high": "0.2",
+   "SMD (high vs never/low)": "-0.22"
+  },
+  {
+   "Variable": "Western Japan, %",
+   "never/low": "53.0",
+   "moderate": "43.9",
+   "high": "33.8",
+   "SMD (high vs never/low)": "-0.40"
+  },
+  {
+   "Variable": "Rice, servings/day",
+   "never/low": "2.6 (0.7)",
+   "moderate": "2.6 (0.7)",
+   "high": "2.6 (0.7)",
+   "SMD (high vs never/low)": "-0.12"
+  },
+  {
+   "Variable": "Vegetables, servings/day",
+   "never/low": "3.3 (1.3)",
+   "moderate": "3.6 (1.3)",
+   "high": "3.8 (1.3)",
+   "SMD (high vs never/low)": "0.36"
+  },
+  {
+   "Variable": "Physical activity, MET-h/week",
+   "never/low": "22.1 (15.6)",
+   "moderate": "25.3 (19.7)",
+   "high": "29.9 (24.6)",
+   "SMD (high vs never/low)": "0.38"
+  },
+  {
+   "Variable": "Responders (HbA1c fall >=0.5), %",
+   "never/low": "39.1",
+   "moderate": "46.4",
+   "high": "53.1",
+   "SMD (high vs never/low)": ""
+  }
+ ],
+ "natto_missing_pct": 2.8929135772456545,
+ "n_train": 6581,
+ "n_test": 1646,
+ "best_params": {
+  "clinical|logistic": {
+   "C": 0.1
+  },
+  "clinical|random_forest": {
+   "max_depth": 8,
+   "min_samples_leaf": 50
+  },
+  "clinical|xgboost": {
+   "learning_rate": 0.03,
+   "max_depth": 2,
+   "n_estimators": 150
+  },
+  "clinical|lightgbm": {
+   "learning_rate": 0.03,
+   "n_estimators": 150,
+   "num_leaves": 7
+  },
+  "diet|logistic": {
+   "C": 0.01
+  },
+  "diet|random_forest": {
+   "max_depth": 4,
+   "min_samples_leaf": 20
+  },
+  "diet|xgboost": {
+   "learning_rate": 0.03,
+   "max_depth": 2,
+   "n_estimators": 150
+  },
+  "diet|lightgbm": {
+   "learning_rate": 0.03,
+   "n_estimators": 150,
+   "num_leaves": 7
+  },
+  "clinical+natto|logistic": {
+   "C": 1.0
+  },
+  "clinical+natto|random_forest": {
+   "max_depth": 8,
+   "min_samples_leaf": 50
+  },
+  "clinical+natto|xgboost": {
+   "learning_rate": 0.03,
+   "max_depth": 2,
+   "n_estimators": 150
+  },
+  "clinical+natto|lightgbm": {
+   "learning_rate": 0.03,
+   "n_estimators": 150,
+   "num_leaves": 7
+  },
+  "full|logistic": {
+   "C": 1.0
+  },
+  "full|random_forest": {
+   "max_depth": 8,
+   "min_samples_leaf": 20
+  },
+  "full|xgboost": {
+   "learning_rate": 0.03,
+   "max_depth": 3,
+   "n_estimators": 150
+  },
+  "full|lightgbm": {
+   "learning_rate": 0.03,
+   "n_estimators": 150,
+   "num_leaves": 7
+  }
+ },
+ "cv_auc": {
+  "clinical|logistic": 0.7031298283063869,
+  "clinical|random_forest": 0.6974929020403813,
+  "clinical|xgboost": 0.7014753758120748,
+  "clinical|lightgbm": 0.6998138573712928,
+  "diet|logistic": 0.5459922546627041,
+  "diet|random_forest": 0.5442762154651949,
+  "diet|xgboost": 0.5417435485844944,
+  "diet|lightgbm": 0.5362275889250794,
+  "clinical+natto|logistic": 0.7125281955969387,
+  "clinical+natto|random_forest": 0.7062666787935091,
+  "clinical+natto|xgboost": 0.7120766612408083,
+  "clinical+natto|lightgbm": 0.711176731686096,
+  "full|logistic": 0.7147510347561086,
+  "full|random_forest": 0.7108887857258606,
+  "full|xgboost": 0.7164189428747563,
+  "full|lightgbm": 0.7157446208260632
+ },
+ "table3": [
+  {
+   "Model": "logistic",
+   "AUROC": "0.703 (0.677-0.729)",
+   "AUPRC": "0.645",
+   "Brier": "0.218",
+   "Cal_intercept": "0.01",
+   "Cal_slope": "0.87",
+   "CV_AUROC": "0.713"
+  },
+  {
+   "Model": "random_forest",
+   "AUROC": "0.701 (0.676-0.726)",
+   "AUPRC": "0.644",
+   "Brier": "0.219",
+   "Cal_intercept": "0.01",
+   "Cal_slope": "1.20",
+   "CV_AUROC": "0.706"
+  },
+  {
+   "Model": "xgboost",
+   "AUROC": "0.708 (0.683-0.731)",
+   "AUPRC": "0.649",
+   "Brier": "0.216",
+   "Cal_intercept": "0.01",
+   "Cal_slope": "1.03",
+   "CV_AUROC": "0.712"
+  },
+  {
+   "Model": "lightgbm",
+   "AUROC": "0.709 (0.684-0.733)",
+   "AUPRC": "0.647",
+   "Brier": "0.216",
+   "Cal_intercept": "0.01",
+   "Cal_slope": "0.98",
+   "CV_AUROC": "0.711"
+  }
+ ],
+ "prev_test": 0.45443499392466585,
+ "selected_model": "logistic",
+ "table4": [
+  {
+   "Feature_set": "clinical",
+   "AUROC": "0.694 (0.669-0.719)",
+   "dAUROC": "reference",
+   "dBrier": "reference",
+   "_dA": 0.0,
+   "_lo": 0.0,
+   "_hi": 0.0
+  },
+  {
+   "Feature_set": "diet",
+   "AUROC": "0.521 (0.494-0.549)",
+   "dAUROC": "-0.173 (-0.209 to -0.136)",
+   "dBrier": "+0.028 (+0.020 to +0.036)",
+   "_dA": -0.17348607307301567,
+   "_lo": -0.20875297620367092,
+   "_hi": -0.13616836764238308
+  },
+  {
+   "Feature_set": "clinical+natto",
+   "AUROC": "0.703 (0.677-0.729)",
+   "dAUROC": "+0.009 (+0.001 to +0.016)",
+   "dBrier": "-0.002 (-0.005 to +0.000)",
+   "_dA": 0.008573669622935667,
+   "_lo": 0.0006378068580527252,
+   "_hi": 0.016460221828163518
+  },
+  {
+   "Feature_set": "full",
+   "AUROC": "0.700 (0.674-0.725)",
+   "dAUROC": "+0.005 (-0.004 to +0.015)",
+   "dBrier": "-0.001 (-0.004 to +0.001)",
+   "_dA": 0.005394290691677925,
+   "_lo": -0.0037424461493764994,
+   "_hi": 0.014530154093082361
+  }
+ ],
+ "repeat_split": {
+  "mean": 0.008327328704310272,
+  "sd": 0.0033355547627109653,
+  "min": 0.002934328215999926,
+  "max": 0.013766480473542009
+ },
+ "table5": [
+  {
+   "Subgroup": "Age <60",
+   "n": 912,
+   "AUROC": "0.706 (0.669-0.737)"
+  },
+  {
+   "Subgroup": "Age >=60",
+   "n": 734,
+   "AUROC": "0.695 (0.662-0.733)"
+  },
+  {
+   "Subgroup": "Male",
+   "n": 939,
+   "AUROC": "0.708 (0.676-0.740)"
+  },
+  {
+   "Subgroup": "Female",
+   "n": 707,
+   "AUROC": "0.694 (0.655-0.730)"
+  },
+  {
+   "Subgroup": "Baseline HbA1c <8.0",
+   "n": 736,
+   "AUROC": "0.615 (0.570-0.660)"
+  },
+  {
+   "Subgroup": "Baseline HbA1c >=8.0",
+   "n": 910,
+   "AUROC": "0.639 (0.602-0.675)"
+  },
+  {
+   "Subgroup": "Insulin",
+   "n": 255,
+   "AUROC": "0.686 (0.618-0.745)"
+  },
+  {
+   "Subgroup": "No insulin",
+   "n": 1391,
+   "AUROC": "0.703 (0.674-0.729)"
+  }
+ ],
+ "interaction_p": {
+  "age>=60": 0.6561280138329982,
+  "male": 0.837026239973356,
+  "hba1c0>=8": 0.25913336513541363,
+  "insulin": 0.09116303409124765
+ },
+ "dca": {
+  "lo": 0.2,
+  "hi": 0.5999999999999999,
+  "mean_nb_gain_vs_clinical": 0.005905014243118327,
+  "mean_nb_gain_vs_all": 0.127617253877084,
+  "share_thresholds_above_all": 1.0
+ },
+ "cal_clinical": {
+  "intercept": 0.007930243410252114,
+  "slope": 0.889447539846137
+ },
+ "cal_natto": {
+  "intercept": 0.00858995597101101,
+  "slope": 0.8733747508095706
+ },
+ "shap_top": {
+  "hba1c0": 0.6580882673159798,
+  "natto_cat": 0.2129564054565501,
+  "arm": 0.1483591899535096,
+  "age": 0.07501098187043115,
+  "metformin": 0.06997233350417385,
+  "dpp4": 0.04465912968130662,
+  "region_west": 0.04086439306061075,
+  "male": 0.03813736121401046,
+  "egfr": 0.02898622977773901,
+  "insulin": 0.024880709198200533
+ },
+ "shap_rank_natto": 2,
+ "shap_natto_share": 0.14392875765555274,
+ "shap_natto_rank_range": [
+  2,
+  2
+ ],
+ "causal": {
+  "crude_or": {
+   "est": 1.760274452145919,
+   "lo": 1.5829490994766409,
+   "hi": 1.9744737783098734
+  },
+  "adj_or": {
+   "est": 1.7819459488882443,
+   "lo": 1.5420944346863603,
+   "hi": 2.030073764152579
+  },
+  "adj_delta": {
+   "est": -0.30975096182264167,
+   "lo": -0.3591208476959523,
+   "hi": -0.2618177420324808
+  },
+  "ipw_or": {
+   "est": 1.6182343143878415,
+   "lo": 1.4504810077921364,
+   "hi": 1.8093440090017328
+  },
+  "ipw_delta": {
+   "est": -0.31161538816486495,
+   "lo": -0.36600279098122507,
+   "hi": -0.2627406760616143
+  },
+  "n": 5577,
+  "n_high": 2401,
+  "n_low": 3176,
+  "n_trimmed": 112,
+  "max_smd_before": 0.3951037976854443,
+  "max_smd_after": 0.04792322002735492,
+  "ps_min": 0.009029242823342663,
+  "ps_max": 0.98850404431721
+ },
+ "causal_noVKA": {
+  "crude_or": {
+   "est": 1.763166482096719,
+   "lo": 1.5789338834858357,
+   "hi": 1.959576488835977
+  },
+  "adj_or": {
+   "est": 1.7885522850762408,
+   "lo": 1.566425887372113,
+   "hi": 2.033775378211336
+  },
+  "adj_delta": {
+   "est": -0.30957610236213595,
+   "lo": -0.3530080394460122,
+   "hi": -0.2663113380747163
+  },
+  "ipw_or": {
+   "est": 1.5979838583630888,
+   "lo": 1.432041723118297,
+   "hi": 1.796936611586015
+  },
+  "ipw_delta": {
+   "est": -0.3036859750601123,
+   "lo": -0.34862474946472044,
+   "hi": -0.25898197046834387
+  },
+  "n": 5479,
+  "n_high": 2396,
+  "n_low": 3083,
+  "n_trimmed": 110,
+  "max_smd_before": 0.3982792857250985,
+  "max_smd_after": 0.013347709874140742,
+  "ps_min": 0.08450913118440638,
+  "ps_max": 0.9884169217663801
+ },
+ "causal_notrim": {
+  "crude_or": {
+   "est": 1.760274452145919,
+   "lo": 1.589001953682672,
+   "hi": 1.9552506610123945
+  },
+  "adj_or": {
+   "est": 1.7819459488882443,
+   "lo": 1.5541829049882336,
+   "hi": 1.997727123833746
+  },
+  "adj_delta": {
+   "est": -0.30975096182264167,
+   "lo": -0.35243723300239593,
+   "hi": -0.26262342902398006
+  },
+  "ipw_or": {
+   "est": 1.6161278205475187,
+   "lo": 1.4426271475394363,
+   "hi": 1.7743073446252449
+  },
+  "ipw_delta": {
+   "est": -0.3088433542257817,
+   "lo": -0.3458267404811815,
+   "hi": -0.2613998774710426
+  },
+  "n": 5577,
+  "n_high": 2401,
+  "n_low": 3176,
+  "n_trimmed": 0,
+  "max_smd_before": 0.3951037976854443,
+  "max_smd_after": 0.045990608883253244,
+  "ps_min": 0.009029242823342663,
+  "ps_max": 0.98850404431721
+ },
+ "adj_or_moderate": {
+  "est": 1.3897928130153532,
+  "lo": 1.2353550224967598,
+  "hi": 1.5635376292115204
+ },
+ "adj_or_high": {
+  "est": 1.7819459488882474,
+  "lo": 1.5732241341100317,
+  "hi": 2.0183591745848166
+ },
+ "truth": {
+  "b_high": -0.3
+ },
+ "shifted": {
+  "n": 3675,
+  "prevalence": 0.5610884353741497,
+  "clinical": {
+   "auc": 0.7055741931914734,
+   "lo": 0.6885768669989949,
+   "hi": 0.7221320175254134,
+   "intercept": -0.003541961869919823,
+   "slope": 0.957747347720637,
+   "brier": 0.21510864031226273
+  },
+  "clinical+natto": {
+   "auc": 0.713325231523936,
+   "lo": 0.6974194224134632,
+   "hi": 0.7280053321721884,
+   "intercept": 0.030977373283238463,
+   "slope": 0.9446554919807639,
+   "brier": 0.21288790541166502
+  }
+ }
+}
