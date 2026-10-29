@@ -12,4 +12,12 @@ All records are synthetic and generated with declared parameters. Nothing here s
 - `results/` result tables, JSON summaries and figures
 
 ## Run
-Python 3 with numpy, pandas, scikit-learn, xgboost, lightgbm, shap, matplotlib. Run `python code/natto_run.py` from the repository root. To use real data, replace the loader in `natto_run.py`.
+Python 3 with numpy, pandas, scikit-learn, statsmodels, xgboost, lightgbm, shap, matplotlib.
+
+```
+cd code
+python natto_run.py main        # main analysis
+python natto_run.py scenarios   # simulated scenarios
+```
+
+To use real data, replace the synthetic generator call in `natto_run.py`. No licence has been chosen yet.
