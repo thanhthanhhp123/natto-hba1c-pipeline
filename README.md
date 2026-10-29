@@ -20,4 +20,4 @@ python natto_run.py main        # main analysis
 python natto_run.py scenarios   # simulated scenarios
 ```
 
-To use real data, replace the synthetic generator call in `natto_run.py`. No licence has been chosen yet.
+To use real data, replace the synthetic generator call in `natto_run.py`. Released under the MIT License (see `LICENSE`).
